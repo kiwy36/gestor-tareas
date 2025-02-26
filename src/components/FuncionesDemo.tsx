@@ -27,9 +27,9 @@ const sumarArrow = (a: number, b: number): number => {
   return a + b;
 };
 
-///////////////////////
+//////////////
 // 3. Parámetros opcionales y valores por defecto
-///////////////////////
+//////////////
 const crearSaludoOpcional = (nombre: string, saludo?: string): string => {
   const saludoFinal = saludo ? saludo : "Hola";
   console.log(`Creando saludo para ${nombre} usando '${saludoFinal}'`);
