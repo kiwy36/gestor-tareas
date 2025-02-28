@@ -1,7 +1,7 @@
 const ClassTres = () => {
   return (
     <div>
-      sdad
+      dia de clases
     </div>
   )
 }
