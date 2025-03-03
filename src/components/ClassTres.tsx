@@ -1,28 +1,33 @@
-const ClassTres = () => {
-  const arrayUno = ['elementoUno', 'elementoDos']
-  console.log (arrayUno[0])
-  console.log(arrayUno.length)
-  arrayUno[0]='elemento sobreescribido'
-  console.log (arrayUno[0])
-  arrayUno.push('elementoTres')
-  console.log (arrayUno[2])
-  let num  = 0;
-  while (num <20){
-    console.log(num)
-    num = num +1
+import React, { useEffect, useState } from "react";
 
-  }
-  let i
-  for (i =0 ; i<= 5; i++){
-    console.log('coso')
-  }
+const ClassTres: React.FC = () => {
+  const [index, setIndex] = useState(1);
+  const [fizzBuzzValue, setFizzBuzzValue] = useState<string>("");
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex < 100 ? prevIndex + 1 : 1));
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const getFizzBuzzValue = (i: number) => {
+      if (i % 15 === 0) return "FizzBuzz";
+      if (i % 3 === 0) return "Fizz";
+      if (i % 5 === 0) return "Buzz";
+      return i.toString();
+    };
+    setFizzBuzzValue(getFizzBuzzValue(index));
+  }, [index]);
 
   return (
     <div>
-      dia de clases
+      <ul>
+        <li>{fizzBuzzValue}</li>
+      </ul>
     </div>
-  )
-}
+  );
+};
 
-export default ClassTres
+export default ClassTres;
