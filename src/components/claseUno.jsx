@@ -4,7 +4,7 @@
 // Preguntarle estos datos al usuario y guardarlo en 2 variables.
 // Ejecutar la funcion con estos datos
 // Imprimir el resultado en la consola
-
+/*
 function calcularEdadDelUsuario(añoNacimiento, añoActual) {
     return restar(añoActual, añoNacimiento);
 }
@@ -50,7 +50,7 @@ function sumar(numero1, numero2) {
 function restar(numero1, numero2) {
     return numero1 - numero2;
 }
-
+*/
 // TAREA: Tenemos 2 funciones de la tarea anterior -- 'sumar' y 'restar'
 //      Vamos a decirle a la máquina qué función tiene que correr, dependiendo del operador artmético (+, -, /, *, etc.)
 //
@@ -65,7 +65,7 @@ function restar(numero1, numero2) {
 // Si no, tenemos que llamar la función 'restar', con nuestros números (las variables del paso 2).
 //
 // No se olviden de hacer un console.log para ver el resultado!
-
+/*
 function sumarORestar() {
     let operador = '+';
     let numero1 = 5;
@@ -105,13 +105,13 @@ function dividir(numeroADividir, divisor) {
 function multiplicar(numeroAMultiplicar, multiplicador) {
     return numeroAMultiplicar * multiplicador
 }
-
+*/
 // TAREA: Reescribamos el if-else que teníamos y extendámolos, agregando:
 //       'else if' el 'operador' es igual a '-' - llamar a la función 'restar'
 //       'else if' el 'operador' es igual a '/' - llamar a la función 'dividir'.
 //       'else if' el 'operador' es igual a '*' - llamar a la función 'multiplicar'.
 //       else console.log - "Perdón, no conozco ese operador".
-
+/*
 let numero1;
 let numero2;
 let operador;
@@ -140,4 +140,17 @@ pedirValores();
 
 const resultado = calcular(numero1, numero2, operador)
   
-console.log(`El resultado de ${numero1} ${operador} ${numero2} es ${resultado}`)
+console.log(`El resultado de ${numero1} ${operador} ${numero2} es ${resultado}`)*/
+
+//Tarea uno
+// Función que calcula los años transcurridos
+export default function CalcularEdad (natalicio,fechaActual){
+    return fechaActual -natalicio;
+}
+//conseguir info del año actual y el año de natalicio
+const fechaActual =Number(prompt('en que año estamos ?'));
+const natalicio = Number(prompt('que año naciste ?'))
+// Calculamos cuántos años han pasado
+const tiempoTranscurrido = CalcularEdad(fechaActual,natalicio);
+// Mostramos el resultado en consola
+console.log(`Han pasado ${tiempoTranscurrido} años desde que naciste.`);

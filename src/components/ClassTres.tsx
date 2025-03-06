@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+
 const ClassTres: React.FC = () => {
   const [index, setIndex] = useState(1);
   const [fizzBuzzValue, setFizzBuzzValue] = useState<string>("");
